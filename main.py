@@ -81,7 +81,7 @@ def create_faq(project_id: str, faq: Faq):
         collection_name="test_collection",
         wait=True,
         points=[
-            PointStruct(id=1, vector=outputs[0], payload=answer),
+            PointStruct(id=1, vector=outputs.tolist(), payload=answer),
         ]
     )
     return json.dump(operation_info)
